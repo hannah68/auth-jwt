@@ -26,8 +26,7 @@ function createTokenWithExpiry(payload, secretKey, expirayTime) {
  */
 function verifyToken(targetToken, secretKey) {
     try{
-        const decoded = jwt.verify(targetToken, secretKey);
-        return decoded;
+        return jwt.verify(targetToken, secretKey);
     }
     catch(err){
         console.log(err);
